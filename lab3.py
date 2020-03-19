@@ -130,15 +130,18 @@ S2y4 = S2[3]
 Gp = max(S2)/sum(S2)
 
 m = len(y_list[0])
-f1 = m-1
-f2 = N = len(x_matrix)
 q = 0.05
-# для q = 0.05, f1 = 2, f2 = 4, Gt = 0.7679
 Gt = 0.7679
 if Gp < Gt:
     print("Дисперсія однорідна")
 else:
     print("Дисперсія не однорідна")
+    m += 1
+
+f1 = m-1
+f2 = N = len(x_matrix)
+
+
 
 """STUDENT"""
 S2B = sum(S2)/N
